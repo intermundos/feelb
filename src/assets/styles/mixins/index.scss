@@ -1,0 +1,26 @@
+@mixin scroll-bar($y: true, $x: false) {
+
+  $scrollbar-size: 5px;
+
+  @if $y == true {
+    overflow-y: scroll;
+  }
+
+  @if $x == true {
+    overflow-x: auto;
+  }
+
+  &::-webkit-scrollbar {
+    width: $scrollbar-size;
+    height: $scrollbar-size;
+  }
+
+  &::-webkit-scrollbar-track {
+    background-color: var(--color-dark-700);
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: var(--color-dark-300);
+    border-radius: 2px;
+  }
+}

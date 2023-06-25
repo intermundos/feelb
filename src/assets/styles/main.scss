@@ -1,0 +1,27 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html, body {
+  height: 100%;
+}
+
+body {
+
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  @include scroll-bar();
+}
+
+.container {
+  width: min(100%, 1280px);
+  margin: 0 auto;
+  padding-inline: 32px;
+}
+
+a {
+  color: var(--color-primary);
+  text-decoration: none;
+  font-weight: 700;
+}
