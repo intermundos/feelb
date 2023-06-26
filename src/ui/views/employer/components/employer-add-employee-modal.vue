@@ -28,6 +28,12 @@
             />
 
             <a-input type="text"
+                     placeholder="Last name"
+                     :value="form.data.email"
+                     @input="( value ) => form.data.email = value"
+            />
+
+            <a-input type="text"
                      placeholder="Title"
                      :value="form.data.title"
                      @input="( value ) => form.data.title = value"
